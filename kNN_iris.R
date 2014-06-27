@@ -71,10 +71,10 @@ for (i in 1:k_value) {
 scores = rep(0,k_value)
 for (i in 1:k_value) {
   if (k_lowest_labels[i] == "setosa") {
-    scores[1] = scores[1] + 1 * distances[orders[i]]
+    scores[1] = scores[1] + 1 * (1 / distances[orders[i]])
   } else if (k_lowest_labels[i] == "versicolor") {
-    scores[2] = scores[2] + 1 * distances[orders[i]]
-  } else scores[3] = scores[3] + 1 * distances[orders[i]]
+    scores[2] = scores[2] + 1 * (1 / distances[orders[i]])
+  } else scores[3] = scores[3] + 1 * (1 / distances[orders[i]])
 }
 
 winner = max(scores)
